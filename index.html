@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Prince | Developer Portfolio</title>
+<title>Prince | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -18,7 +19,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
 }
 
 body{
@@ -37,9 +38,8 @@ z-index:-1;
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:20px 8%;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 }
 
@@ -57,10 +57,9 @@ text-decoration:none;
 height:100vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:20px;
 }
 
 .hero img{
@@ -72,12 +71,12 @@ box-shadow:0 0 30px #38bdf8;
 
 .hero h1{
 font-size:50px;
-margin-top:15px;
+margin-top:10px;
 }
 
 .typing{
 color:#38bdf8;
-font-size:26px;
+font-size:24px;
 margin-top:10px;
 }
 
@@ -118,16 +117,23 @@ background:#38bdf8;
 
 .social{
 text-align:center;
+margin-top:20px;
 }
 
 .social a{
-font-size:26px;
+font-size:28px;
 margin:15px;
 color:#38bdf8;
+transition:0.3s;
+}
+
+.social a:hover{
+color:white;
+transform:scale(1.2);
 }
 
 .resume{
-margin-top:20px;
+margin-top:25px;
 display:inline-block;
 padding:12px 25px;
 background:#38bdf8;
@@ -143,6 +149,7 @@ color:#94a3b8;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -178,9 +185,11 @@ color:#94a3b8;
 <h2>About Me</h2>
 
 <p>
+
 E-commerce and Accounts specialist with experience managing Flipkart and Meesho stores,
-digital promotions and data analysis. Passionate about automation, marketing strategies
-and building digital solutions.
+digital promotions and marketing strategies. Passionate about building automation tools
+and improving online business growth.
+
 </p>
 
 </div>
@@ -221,15 +230,29 @@ and building digital solutions.
 
 <div class="social">
 
-<a href="https://www.instagram.com/ecom_prince01"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/919355689181" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-<a href="https://youtube.com/@gorouff"><i class="fab fa-youtube"></i></a>
+<a href="mailto:raghavkvlogs542@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
 
-<a href="https://t.me/Orewagarouxshein"><i class="fab fa-telegram"></i></a>
+<a href="https://www.instagram.com/ecom_prince01">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://youtube.com/@gorouff">
+<i class="fab fa-youtube"></i>
+</a>
+
+<a href="https://t.me/Orewagarouxshein">
+<i class="fab fa-telegram"></i>
+</a>
 
 </div>
 
-<a class="resume" href="#">Download Resume</a>
+<a class="resume" href="resume.pdf">Download Resume</a>
 
 </div>
 
@@ -243,7 +266,11 @@ and building digital solutions.
 
 <script>
 
-var text=["E-commerce Specialist","Automation Enthusiast","Digital Marketing Strategist"]
+var text=[
+"E-commerce Specialist",
+"Automation Enthusiast",
+"Digital Marketing Strategist"
+]
 
 let i=0
 let j=0
