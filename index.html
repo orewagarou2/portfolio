@@ -2,100 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prince | Portfolio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Prince | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#020617;
 color:white;
-text-align:center;
 overflow-x:hidden;
 }
 
-header{
-padding:60px;
-background:linear-gradient(135deg,#1e293b,#020617);
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
-h1{
-font-size:45px;
-margin:10px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
+
+nav h2{
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero img{
-width:180px;
+width:170px;
 border-radius:50%;
 border:4px solid #38bdf8;
-box-shadow:0 0 20px #38bdf8;
+box-shadow:0 0 30px #38bdf8;
 }
 
-.tag{
+.hero h1{
+font-size:50px;
+margin-top:15px;
+}
+
+.typing{
 color:#38bdf8;
-font-size:20px;
+font-size:26px;
+margin-top:10px;
 }
 
 .section{
-padding:60px 20px;
+padding:80px 10%;
 }
 
 .card{
-background:#1e293b;
-margin:20px auto;
-padding:25px;
-max-width:600px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+padding:40px;
+margin:20px 0;
+backdrop-filter:blur(15px);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
-.skill{
-text-align:left;
-margin:10px 0;
+.skills span{
+display:block;
+margin-top:15px;
 }
 
 .bar{
-background:#334155;
+height:8px;
+background:#1e293b;
 border-radius:10px;
 overflow:hidden;
 }
 
 .progress{
-height:10px;
+height:100%;
 background:#38bdf8;
-width:80%;
-animation:load 2s;
 }
 
-@keyframes load{
-0%{width:0}
+.social{
+text-align:center;
 }
 
 .social a{
-display:inline-block;
-margin:10px;
-padding:12px 20px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-border-radius:8px;
-transition:0.3s;
+font-size:26px;
+margin:15px;
+color:#38bdf8;
 }
 
-.social a:hover{
-background:white;
+.resume{
+margin-top:20px;
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+border-radius:8px;
+text-decoration:none;
 }
 
 footer{
-padding:20px;
-background:#020617;
-margin-top:40px;
+text-align:center;
+padding:30px;
+color:#94a3b8;
 }
 
 </style>
@@ -103,69 +147,73 @@ margin-top:40px;
 
 <body>
 
-<header class="hero">
+<div id="particles-js"></div>
+
+<nav>
+
+<h2>Prince</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<section class="hero">
 
 <img src="profile.jpg">
 
 <h1>Prince</h1>
 
-<p class="tag">E-commerce & Accounts Specialist</p>
+<div class="typing" id="typing"></div>
 
-<p>Helping brands grow with E-commerce, marketing and automation tools.</p>
+</section>
 
-</header>
-
-<section class="section">
+<section class="section" id="about">
 
 <div class="card">
 
 <h2>About Me</h2>
 
 <p>
-Results-driven marketing professional with experience in e-commerce operations,
-digital promotions and customer engagement.
-Experienced with Flipkart, Meesho and digital marketing strategies.
+E-commerce and Accounts specialist with experience managing Flipkart and Meesho stores,
+digital promotions and data analysis. Passionate about automation, marketing strategies
+and building digital solutions.
 </p>
 
 </div>
+
+</section>
+
+<section class="section" id="skills">
 
 <div class="card">
 
 <h2>Skills</h2>
 
-<div class="skill">
-Python / Automation
-<div class="bar"><div class="progress"></div></div>
-</div>
+<div class="skills">
 
-<div class="skill">
-E-commerce Management
-<div class="bar"><div class="progress"></div></div>
-</div>
+<span>E-commerce Management</span>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
 
-<div class="skill">
-MS Excel (VLOOKUP / Pivot)
-<div class="bar"><div class="progress"></div></div>
-</div>
+<span>MS Excel / Data Analysis</span>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
 
-<div class="skill">
-Digital Marketing
-<div class="bar"><div class="progress"></div></div>
+<span>Digital Marketing</span>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+
+<span>Automation Tools</span>
+<div class="bar"><div class="progress" style="width:70%"></div></div>
+
 </div>
 
 </div>
 
-<div class="card">
+</section>
 
-<h2>Experience</h2>
-
-<p>
-Back Office Internship – Adore<br><br>
-Managing Flipkart & Meesho Accounts<br><br>
-E-commerce promotions and digital marketing activities.
-</p>
-
-</div>
+<section class="section" id="contact">
 
 <div class="card">
 
@@ -173,13 +221,15 @@ E-commerce promotions and digital marketing activities.
 
 <div class="social">
 
-<a href="https://www.instagram.com/ecom_prince01">Instagram</a>
+<a href="https://www.instagram.com/ecom_prince01"><i class="fab fa-instagram"></i></a>
 
-<a href="https://youtube.com/@gorouff">YouTube</a>
+<a href="https://youtube.com/@gorouff"><i class="fab fa-youtube"></i></a>
 
-<a href="https://t.me/Orewagarouxshein">Telegram</a>
+<a href="https://t.me/Orewagarouxshein"><i class="fab fa-telegram"></i></a>
 
 </div>
+
+<a class="resume" href="#">Download Resume</a>
 
 </div>
 
@@ -190,6 +240,53 @@ E-commerce promotions and digital marketing activities.
 © 2026 Prince Portfolio
 
 </footer>
+
+<script>
+
+var text=["E-commerce Specialist","Automation Enthusiast","Digital Marketing Strategist"]
+
+let i=0
+let j=0
+let current=""
+let deleting=false
+
+function type(){
+
+current=text[i]
+
+if(!deleting){
+document.getElementById("typing").textContent=current.substring(0,j++)
+}else{
+document.getElementById("typing").textContent=current.substring(0,j--)
+}
+
+if(!deleting && j==current.length){
+deleting=true
+setTimeout(type,1000)
+return
+}
+
+if(deleting && j==0){
+deleting=false
+i=(i+1)%text.length
+}
+
+setTimeout(type,120)
+
+}
+
+type()
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:2},
+line_linked:{enable:true}
+}
+})
+
+</script>
 
 </body>
 </html>
